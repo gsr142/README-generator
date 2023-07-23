@@ -23,7 +23,7 @@ inquirer
     },
     {
         type: 'input',
-        message: 'How do you use the application',
+        message: 'How do you use the application?',
         name: 'usage'
     },
     {
@@ -60,52 +60,54 @@ inquirer
     },
   ])
   .then((response) => {
-    console.log(JSON.stringify(response))
+    return fs.writeFile(`${response.title}.md`, generate(response), (err) =>
+    err ? console.error(err) : console.log('Your Readme file has been generated!'))
   });
 
   function generate(data) {
-    return `# ${data.title}
-    
-    ## Table of Contents:
-      1. [Description](#description)
-      2. [Installation](#installation)
-      3. [Usage](#usage)
-      4. [Contributions](#contributions)
-      5. [Testing](#testing)
-      6. [License](#license)
-      7. [Technologies Used](#technology)
-      8. [GitHub](#github)
-      9. [Email](#email)
-      
-      
-    ## Description
-    ${data.description}
-    
-    ## Installation
-    ${data.installation}
-    
-    ## Usage
-    ${data.usage}
-    
-    ## Contributions
-    ${data.contributions}
-    
-    ## Testing
-    ${data.testing}
-    
-    ## License
-    ${data.license}
-    
-    ## Technologies Used
-    ${data.technologies}
-    
-    ## Questions
-    For qestions about the project you can contact me at
-    
-    ### Github
-    [${data.github}](https//:github.com/${data.github})
-    
-    ### Email
-    [${data.email}](gsr142@gmail.com)`
+    return `
+# ${data.title}
+
+## Table of Contents:
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributions](#contributions)
+5. [Testing](#testing)
+6. [License](#license)
+7. [Technologies Used](#technology)
+8. [GitHub](#github)
+9. [Email](#email)
+  
+  
+## Description
+${data.description}
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## Contributions
+${data.contributions}
+
+## Testing
+${data.testing}
+
+## License
+${data.license}
+
+## Technologies Used
+${data.technologies}
+
+## Questions
+For qestions about the project you can contact me at
+
+### Github
+[${data.github}](https://github.com/${data.github})
+
+### Email
+[${data.email}](gsr142@gmail.com)`
 
   }
