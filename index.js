@@ -43,6 +43,12 @@ inquirer
         name: 'license'
     },
     {
+      type: 'checkbox',
+      message: 'What technologies are used in this project?',
+      choices: ["HTML", "CSS", "JavaScript", "BootStrap", "JQUERY", "NodeJS", "React.JS", "Dayjs", "Bulma"],
+      name: 'technology'
+    },
+    {
         type: 'input',
         message: 'Enter your GitHub username',
         name: 'github'
