@@ -60,8 +60,10 @@ inquirer
     },
   ])
   .then((response) => {
-    return fs.writeFile(`${response.title}.md`, generate(response), (err) =>
+    //console.log(...response.technology)
+    return fs.writeFile(`README.md`, generate(response), (err) =>
     err ? console.error(err) : console.log('Your Readme file has been generated!'))
+    
   });
 
   function generate(data) {
@@ -99,7 +101,7 @@ ${data.testing}
 ${licenseBadge(data)}
 
 ## Technologies Used
-${data.technologies}
+${data.technology}
 
 ## Questions
 For qestions about the project you can contact me at
@@ -108,7 +110,7 @@ For qestions about the project you can contact me at
 [${data.github}](https://github.com/${data.github})
 
 ### Email
-[${data.email}](gsr142@gmail.com)`
+[${data.email}](${data.email})`
 
   }
 

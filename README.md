@@ -1,5 +1,5 @@
 
-# readme
+# README-generator
 
 ## Table of Contents:
 1. [Description](#description)
@@ -14,25 +14,25 @@
   
   
 ## Description
-readmes
+This application runs in the command line and will automatically generate a README.md file. The user answers a series of questions and the application generatetes the appropriate markdown with the user's answers filled in at the correct places in the file. This is to save time on writing README files.
 
 ## Installation
-read
+Be sure that node.js is installed on your machine. Clone the repository to your machine. Use the command line to navigate into the same directory as the index.js file. Type 'npm install' and press enter. This will install all of the node modules needed for the application to run properly. Now you are ready to run the application.
 
 ## Usage
-run away
+In the command line, type 'node index.js' and press enter. Answer the questions as thoroughly as possible, and the application will generate a README.md file for your project.
 
 ## Contributions
-jump in
+Create a pull request, or you can contact me by email or on GitHub.
 
 ## Testing
-test
+Tests can be updated as necessary.
 
 ## License
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Technologies Used
-undefined
+JavaScript,NodeJS
 
 ## Questions
 For qestions about the project you can contact me at
