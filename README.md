@@ -1,3 +1,4 @@
+
 # readme
 
 ## Table of Contents:
@@ -10,25 +11,25 @@
 7. [Technologies Used](#technology)
 8. [GitHub](#github)
 9. [Email](#email)
-
-
+  
+  
 ## Description
-generates readme
+readmes
 
 ## Installation
-clone it
+read
 
 ## Usage
-answer the questions
+run away
 
 ## Contributions
-pull requests
+jump in
 
 ## Testing
-run their own
+test
 
 ## License
-MIT
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Technologies Used
 undefined
@@ -37,7 +38,7 @@ undefined
 For qestions about the project you can contact me at
 
 ### Github
-[gsr142](https//:github.com/gsr142)
+[gsr142](https://github.com/gsr142)
 
 ### Email
 [gsr142@gmail.com](gsr142@gmail.com)

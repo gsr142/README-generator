@@ -96,7 +96,7 @@ ${data.contributions}
 ${data.testing}
 
 ## License
-${data.license}
+${licenseBadge(data)}
 
 ## Technologies Used
 ${data.technologies}
@@ -111,3 +111,21 @@ For qestions about the project you can contact me at
 [${data.email}](gsr142@gmail.com)`
 
   }
+
+function licenseBadge(data) {
+  const licenseChoice = data.license[0];
+  let licenseBadge = ""
+  if (licenseChoice === "MIT"){
+    licenseBadge = ` [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  };
+  if (licenseChoice === "Apache License 2.0"){
+    licenseBadge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  };
+  if (licenseChoice === "GNU General Public License 2.0"){
+    licenseBadge = `[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
+  };
+  if (licenseChoice === "GNU General Public License 3.0"){
+    licenseBadge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+  };
+  return licenseBadge
+}
