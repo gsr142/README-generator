@@ -60,12 +60,12 @@ inquirer
     },
   ])
   .then((response) => {
-    //console.log(...response.technology)
+    // Writes file titled 'README.md', with the content written by the generate formula. Logs an error if there is an error, otherwise lets the user know that the file has been generated.
     return fs.writeFile(`README.md`, generate(response), (err) =>
     err ? console.error(err) : console.log('Your Readme file has been generated!'))
     
   });
-
+  // Generates markdown with user selections inserted appropriately
   function generate(data) {
     return `
 # ${data.title}
@@ -113,7 +113,7 @@ For qestions about the project you can contact me at
 [${data.email}](${data.email})`
 
   }
-
+// links a badge with license info based on user selection
 function licenseBadge(data) {
   const licenseChoice = data.license[0];
   let licenseBadge = ""
